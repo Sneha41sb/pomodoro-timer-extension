@@ -1,0 +1,75 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 300px;
+  margin: 0;
+  padding: 15px;
+  background-color: #f8f9fa;
+  color: #333;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modes {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+.mode-btn {
+  background-color: transparent;
+  border: 1px solid #ddd;
+  color: #666;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+.mode-btn.active {
+  background-color: #333;
+  color: white;
+  border-color: #333;
+}
+.timer {
+  font-size: 64px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #d32f2f;
+  font-variant-numeric: tabular-nums;
+}
+body.focus .timer { color: #d32f2f; }
+body.shortBreak .timer { color: #388e3c; }
+body.longBreak .timer { color: #1976d2; }
+
+.controls {
+  display: flex;
+  gap: 10px;
+}
+button {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+button:hover:not(:disabled) {
+  filter: brightness(0.9);
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+button#startBtn {
+  background-color: #4caf50;
+  color: white;
+}
+button#pauseBtn {
+  background-color: #ff9800;
+  color: white;
+}
+button#resetBtn {
+  background-color: #9e9e9e;
+  color: white;
+}
